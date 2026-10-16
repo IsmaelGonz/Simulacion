@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T11:05:00-05:00",
+  "title": "Design System: Caja rápida — Simulación M/M/1",
+  "extensions": {
+    "colorMeta": {
+      "signal-yellow": { "role": "primary", "displayName": "Signal Yellow" },
+      "exit-green": { "role": "secondary", "displayName": "Exit Green" },
+      "alert-red": { "role": "tertiary", "displayName": "Saturation Red" },
+      "ink": { "role": "neutral", "displayName": "Sign Ink" },
+      "terminal-wall": { "role": "neutral", "displayName": "Terminal Wall" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Clock", "purpose": "Simulated minute on the board." },
+      "flap": { "displayName": "Flap", "purpose": "Metric values in departures-board cells." }
+    },
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Gate, button and flap transitions." },
+      { "name": "flap", "value": "260ms rotateX(-80deg) to 0", "purpose": "Board value change." },
+      { "name": "stride", "value": "170ms two-frame pose swap", "purpose": "Pictogram walking." }
+    ],
+    "breakpoints": [
+      { "name": "compact-height", "value": "max-height: 820px" },
+      { "name": "narrow", "value": "max-width: 1500px" },
+      { "name": "stack", "value": "max-width: 1100px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Flap Cell",
+      "kind": "custom",
+      "refersTo": "flap-cell-live",
+      "description": "Live metric value on the departures board.",
+      "html": "<span class=\"ds-flap\">0.892</span>",
+      "css": ".ds-flap { display: inline-block; min-width: 5.6rem; padding: 0.18rem 0.5rem 0.05rem; background: #2e2b1c; color: #ffc20e; border-radius: 3px; font: 700 1.5rem/1.2 Overpass, sans-serif; text-align: right; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Scenario Gate",
+      "kind": "button",
+      "refersTo": "gate-active",
+      "description": "Selects a guide scenario; active state is yellow.",
+      "html": "<button class=\"ds-gate\"><span class=\"n\">3</span><span>Cerca de saturación</span></button>",
+      "css": ".ds-gate { display: inline-flex; gap: 0.8rem; align-items: center; padding: 0.55rem 1rem 0.55rem 0.55rem; background: #ffc20e; color: #16171a; border: 2px solid #ffc20e; border-radius: 6px; font: 700 1.15rem Overpass, sans-serif; } .ds-gate .n { display: grid; place-items: center; width: 2.8rem; height: 2.8rem; background: #16171a; color: #ffc20e; border-radius: 4px; font-weight: 900; font-size: 1.9rem; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The checkout signposted like an airport",
+    "overview": "Pictogram customers, flat black signage and a departures board replay the SimPy records on a cool terminal-gray wall, legible from the back of a classroom.",
+    "keyCharacteristics": ["Aicher-style pictograms", "Departures-board metrics with flap changes", "Three signal colors with one meaning each"],
+    "rules": [
+      { "name": "One meaning per signal color", "body": "Yellow is now, green is leaving/free, red is saturation only.", "section": "colors" },
+      { "name": "Numbers big, words few", "body": "Readable numbers never go below 1.3rem; explanatory text stays on one line.", "section": "typography" }
+    ],
+    "dos": ["Drive every movement from SimPy records", "Respect prefers-reduced-motion"],
+    "donts": ["No cards, gradients, glow or offset shadows", "No dark page ground or neon accents"]
+  }
+}
