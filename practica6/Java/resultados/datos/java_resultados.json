@@ -1,0 +1,53 @@
+{
+  "lenguaje": "Java",
+  "parametros": {
+    "semilla": 12345,
+    "multiplicador": 1664525,
+    "incremento": 1013904223,
+    "modulo": 4294967296
+  },
+  "secuencia": {
+    "n": 10000,
+    "sha256_estados": "23f2d027746be27c5723900296c8d6dd058da69f6fb8ebbf65c1822819dbd696",
+    "primeros_estados": [87628868,71072467,2332836374,2726892157,3908547000,483019191,2129828778,2355140353,2560230508,3364893915],
+    "primeros_valores": [0.02040268573909998,0.01654784823767841,0.5431557944975793,0.6349040560889989,0.9100295137614012,0.11246166913770139,0.4958894052542746,0.5483488442841917,0.5961001170799136,0.7834504160564393],
+    "minimo": 5.908263847231865E-5,
+    "maximo": 0.9999259654432535,
+    "archivo": "Java/resultados/datos/java_secuencia_10000.csv"
+  },
+  "chi_cuadrado": {
+    "prueba": "Chi-cuadrado",
+    "n": 10000,
+    "intervalos": 10,
+    "amplitud": 0.1,
+    "etiquetas_intervalos": ["[0.0, 0.1)","[0.1, 0.2)","[0.2, 0.3)","[0.3, 0.4)","[0.4, 0.5)","[0.5, 0.6)","[0.6, 0.7)","[0.7, 0.8)","[0.8, 0.9)","[0.9, 1.0]"],
+    "frecuencias_observadas": [1016,993,1049,940,949,1063,1014,1016,984,976],
+    "frecuencias_esperadas": [1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0,1000.0],
+    "estadistico": 14.16,
+    "grados_libertad": 9,
+    "alpha": 0.05,
+    "valor_p": 0.1167464640122758,
+    "rechazar_h0": false,
+    "decision": "No se rechaza H0 (p = 0.116746 >= alpha = 0.05).",
+    "interpretacion": "No hay evidencia estadistica suficiente para afirmar que las frecuencias observadas se apartan de una distribucion uniforme U(0,1)."
+  },
+  "kolmogorov_smirnov": {
+    "prueba": "Kolmogorov-Smirnov",
+    "n": 10000,
+    "d_mas": 0.0059602058928460155,
+    "d_menos": 0.005411107248812941,
+    "estadistico_d": 0.0059602058928460155,
+    "indice_d_mas": 3057,
+    "indice_d_menos": 4948,
+    "valor_p": 0.8685666386601966,
+    "alpha": 0.05,
+    "rechazar_h0": false,
+    "decision": "No se rechaza H0 (p = 0.868567 >= alpha = 0.05).",
+    "interpretacion": "No hay evidencia estadistica suficiente para afirmar que la distribucion empirica difiere de la uniforme U(0,1)."
+  },
+  "entorno": {
+    "java_version": "26.0.1",
+    "java_vendor": "Oracle Corporation",
+    "sistema_operativo": "Windows 11 10.0"
+  }
+}
