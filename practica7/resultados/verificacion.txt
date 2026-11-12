@@ -1,0 +1,11 @@
+VERIFICACION DE REPRODUCIBILIDAD - APE 007
+============================================================
+Fecha de ejecucion: 2026-11-12T11:12:40
+Pares verificados por el hash: 1000 (2000 uniformes)
+Pares mostrados en los CSV: 10
+SHA-256 Python: 05765a7a2b04f628206012cba5e5185f930b28b161aec840806a81beaf261004
+SHA-256 Java:   05765a7a2b04f628206012cba5e5185f930b28b161aec840806a81beaf261004
+Los hashes coinciden: SI
+Los primeros 10 pares coinciden bit a bit: SI
+Nc coincide en los cuatro experimentos: SI
+pi estimado coincide en los cuatro experimentos: SI
