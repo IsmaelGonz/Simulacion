@@ -1,6 +1,6 @@
 VERIFICACION DE REPRODUCIBILIDAD - APE 007
 ============================================================
-Fecha de ejecucion: 2026-11-12T11:12:40
+Fecha de ejecucion: 2026-11-15T18:02:24
 Pares verificados por el hash: 1000 (2000 uniformes)
 Pares mostrados en los CSV: 10
 SHA-256 Python: 05765a7a2b04f628206012cba5e5185f930b28b161aec840806a81beaf261004
